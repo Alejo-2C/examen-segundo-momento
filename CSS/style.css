@@ -1,0 +1,506 @@
+/* ================= VARIABLES CSS (Identidad Visual) ================= */
+:root {
+    --color-principal: #1a1a1a;       /* Negro / Carbón */
+    --color-secundario: #b87333;      /* Cobre / Rose gold */
+    --color-complementario: #f5f0eb;  /* Crema / Beige cálido */
+    --color-fondo: #fcfbfa;           /* Blanco cálido / Crema claro */
+    --color-texto: #333333;           /* Texto general legible */
+    --color-blanco: #ffffff;
+}
+
+/* ================= ESTILOS GENERALES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif; /* Sans serif limpia y sencilla */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Georgia", Times, serif; /* Serif elegante para títulos */
+    color: var(--color-principal);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Títulos de secciones */
+.seccion-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.seccion-titulo h2 {
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.seccion-titulo p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ================= 1. HEADER ================= */
+.encabezado {
+    background-color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a {
+    font-family: "Georgia", Times, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.logo span {
+    color: var(--color-secundario);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu a {
+    font-weight: 600;
+    color: var(--color-principal);
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-secundario);
+}
+
+/* ================= 2. HERO ================= */
+.hero {
+    background-color: var(--color-complementario);
+    padding: 80px 20px;
+}
+
+.hero-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.eslogan {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-texto h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: var(--color-secundario);
+}
+
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* ================= 3. SECCIÓN NOSOTROS ================= */
+.nosotros {
+    background-color: var(--color-blanco);
+}
+
+.nosotros-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* ================= 4. PRODUCTOS O SERVICIOS ================= */
+.productos {
+    background-color: var(--color-fondo);
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background-color: var(--color-blanco);
+    border: 1px solid #e0dcd5;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-tarjeta {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-tarjeta:hover {
+    background-color: var(--color-secundario);
+}
+
+/* ================= 5. BENEFICIOS ================= */
+.beneficios {
+    background-color: var(--color-blanco);
+}
+
+.beneficios-contenedor {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background-color: var(--color-complementario);
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.beneficio h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ================= 6. TABLA ================= */
+.seccion-tabla {
+    background-color: var(--color-fondo);
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0dcd5;
+}
+
+th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: var(--color-complementario);
+}
+
+/* ================= 7. GALERÍA ================= */
+.galeria {
+    background-color: var(--color-blanco);
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-contenedor img {
+    width: calc(33.333% - 14px);
+    height: 250px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.galeria-contenedor img:hover {
+    opacity: 0.85;
+}
+
+/* ================= 8. FORMULARIO DE CONTACTO ================= */
+.contacto {
+    background-color: var(--color-complementario);
+}
+
+.contacto-contenedor {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campo {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-completo {
+    flex: 100%;
+}
+
+.formulario label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+.btn-enviar {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 14px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-secundario);
+}
+
+/* ================= 9. FOOTER ================= */
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.footer-info h3 {
+    color: var(--color-secundario);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.eslogan-footer {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.footer-derechos {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* ================= DISEÑO RESPONSIVE BÁSICO ================= */
+@media (max-width: 768px) {
+    /* Menú vertical en pantallas pequeñas */
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Hero pasa de 2 columnas a 1 columna */
+    .hero-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Sección nosotros reorganizada verticalmente */
+    .nosotros-contenedor {
+        flex-direction: column;
+    }
+
+    /* Tarjetas de productos ocupan el 100% */
+    .producto {
+        width: 100%;
+    }
+
+    /* Imágenes de la galería ocupan el 100% */
+    .galeria-contenedor img {
+        width: 100%;
+    }
+}
